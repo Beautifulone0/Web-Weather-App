@@ -1,0 +1,123 @@
+p {
+  color: hsl(238, 47%, 29%);
+}
+
+.weather-app {
+  border: none;
+  padding: 15px;
+}
+
+.box {
+  display: block;
+  margin: 70px auto;
+  background-image: url(Cloud\ 2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);*/
+  border: 2px solid hsl(238, 47%, 29%);
+  border-radius: 0.3rem;
+}
+
+.search {
+  width: 20%;
+  padding: 0.1rem, 0.15rem;
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  /*background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);*/
+  border: none;
+  border-radius: 0.2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.search:hover {
+  background: radial-gradient(
+    263px at 100.2% 3%,
+    rgb(12, 85, 141) 31.1%,
+    rgb(205, 181, 93) 36.4%,
+    rgb(244, 102, 90) 50.9%,
+    rgb(199, 206, 187) 60.7%,
+    rgb(249, 140, 69) 72.5%,
+    rgb(12, 73, 116) 72.6%
+  );
+  color: hsl(0, 0%, 100%);
+}
+
+.text,
+.text1 {
+  margin-top: 0.5rem;
+}
+
+.flex .text h1 {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.5;
+  color: hsl(238, 47%, 29%);
+}
+
+.flex .text1 h1 {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.5;
+  color: hsl(238, 47%, 29%);
+}
+
+.flex .text,
+.text1 p {
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 0.5;
+  color: hsl(238, 47%, 29%);
+}
+
+.flex .text1 a {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 0.5;
+  color: hsl(238, 47%, 29%);
+  text-decoration: none;
+}
+
+.text1 p:nth-child(4) {
+  text-align: center;
+  font-weight: 700 !important;
+}
+p:nth-child(5) {
+  text-align: right;
+  line-height: 0.2;
+  font-weight: 700;
+}
+.slant {
+  width: 100%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  transform: rotate(-5deg);
+  border-color: hsl(238, 47%, 29%);
+}
+.days {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 575.98px) {
+  .weather-app {
+    border: none;
+    padding: 5px;
+  }
+  .search {
+    width: 18%;
+    font-size: 0.8em;
+  }
+
+  .flex .text,
+  .text1 p {
+    font-weight: 400;
+    line-height: 0.5;
+  }
+  .time {
+    margin-right: 2rem;
+    padding: 0;
+  }
+}
