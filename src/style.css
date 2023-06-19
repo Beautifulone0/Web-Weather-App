@@ -10,7 +10,7 @@ p {
 .box {
   display: block;
   margin: 70px auto;
-  background-image: url(Cloud\ 2.jpg);
+  background-image: url(cloud2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   /*background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);*/
@@ -76,6 +76,11 @@ p {
   line-height: 0.5;
   color: hsl(238, 47%, 29%);
   text-decoration: none;
+}
+
+.flex .text1 a:active {
+  color: hsl(0, 0%, 0%);
+  cursor: default;
 }
 
 .text1 p:nth-child(4) {

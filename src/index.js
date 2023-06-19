@@ -43,6 +43,10 @@ function displayWeatherData (response) {
   document.getElementById("description").innerHTML = response.data.weather[0].description
   document.getElementById("humidity").innerHTML = Math.round(response.data.main.humidity)
   document.getElementById("wind").innerHTML =  Math.round(response.data.wind.speed)
+  document.getElementById("icon").src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
+
+  celciusTemprature = response.data.main.temp
+
 }
 
 function search (city) {
@@ -56,6 +60,8 @@ function handleSubmit (event) {
   event.preventDefault();
   let city = document.getElementById("myInput").value
   search(city)
+ 
+ document.getElementById("myInput").value = ""
 }
 
 
@@ -81,3 +87,29 @@ function currentTemperature (position) {
 
 let currentLocation = document.getElementById("currentbtn")
 currentLocation.addEventListener("click", displayCurrentWeatherData)
+
+
+function displayFahrenheitTemp (event) {
+  event.preventDefault()
+  
+  let fahrenheitTemprature = (celciusTemprature * 9) / 5 + 32
+
+  document.getElementById("temp").innerHTML = Math.round (fahrenheitTemprature)
+}
+
+
+function displayCelciusTemp (event) {
+  event.preventDefault()
+
+  document.getElementById("temp").innerHTML = Math.round(celciusTemprature)
+}
+
+
+
+let celciusTemprature = null;
+
+let fahrenheitConversion = document.getElementById("fahrenheit-conversion")
+fahrenheitConversion.addEventListener("click", displayFahrenheitTemp)
+
+let celciusConversion = document.getElementById("celcius-conversion")
+celciusConversion.addEventListener("click", displayCelciusTemp)
