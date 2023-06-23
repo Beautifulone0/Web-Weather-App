@@ -1,10 +1,26 @@
 body{
   background-image: url(Cloud2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
 }
 p {
   color: hsl(238, 47%, 29%);
 }
+a{
+  color: hsl(238, 15%, 54%);
+  opacity: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover{
+  text-decoration: underline;
+  color: hsl(205, 81%, 25%);
+}
 
+#country {
+  font-weight: bold;
+}
 .weather-app {
   border: none;
   padding: 15px;
@@ -125,6 +141,11 @@ p:nth-child(5) {
   font-size: 1em;
   font-weight: 700;
 }
+.footer p{
+  position: relative;
+  top: 3.5rem;
+  left: -0.5rem;
+}
 /*.days {
   display: flex;
   align-items: center;
@@ -153,5 +174,9 @@ p:nth-child(5) {
   .forecast-temperature {
     font-size: 0.5em;
     font-weight: 900;
+  }
+
+  .footer p{
+    left: -10px;
   }
 }

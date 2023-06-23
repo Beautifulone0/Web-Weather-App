@@ -117,6 +117,7 @@ function displayWeatherData (response) {
   document.getElementById("description").innerHTML = response.data.condition.description
   document.getElementById("humidity").innerHTML = Math.round(response.data.temperature.humidity)
   document.getElementById("wind").innerHTML =  Math.round(response.data.wind.speed)
+  document.getElementById("country").innerHTML = response.data.country
   //document.getElementById("icon").setAttribute("src", icon)
   document.getElementById("icon").src = icon;
 
